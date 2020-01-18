@@ -1,0 +1,31 @@
+An image is the application wewant to run
+A container is an instance of that image running as a process.
+	NB - You can have many containers running off the same image
+
+// download, setup and run
+docker container run --publish 86:80 nginx
+
+docker container run --publish 86:80 --detach nginx //run nginx in the background
+
+86 - host port
+80 - container port
+
+sudo docker container run --publish 88:80 --detach --name webhost1 nginx  // --name
+
+//log -- shows a running container
+docker container ls
+
+// full log
+docker container ls -a
+
+//stop a container
+sudo docker stop webhost1
+
+
+//remove multiple continers
+sudo docker container rm 52e aaa 09e
+
+
+
+
+
