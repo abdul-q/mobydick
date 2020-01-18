@@ -40,4 +40,4 @@ docker network disconnect		--> detach a network to a container
 
 docker network inspect bridge  --> details about the network bridge
 
-ok
+
