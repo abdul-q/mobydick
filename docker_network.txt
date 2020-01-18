@@ -1,0 +1,41 @@
+docker container run -d -p 3306:3306 --name db3 -e MYSQL_RANDOM_ROOT_PASSWORD=yes mysql
+do
+docker container stop
+
+
+
+docker container logs  name_of_conainer
+
+docker container top      // processlist in one container
+
+docker container inspect webhost2      //details of one contaier config
+
+ docker container stats     // performance stats for all containers
+
+docker container run -it   //stars a new container interactively
+docker container exec -it  // run additional  cmd in existing container
+ docker container run -it --name pulley nginx bash
+
+//start 
+docker container start -a docked
+//re-enter an existing container
+docker container start -ai docked bash
+ docker container exec -it proxy bash
+
+Docker Networks:
+-p --> port
+docker container network -ls  --> show network
+docker container port container  --> show ports
+
+Skip virtual networks and use host IP (--net=host)
+
+Search for IPAdress of container
+docker container inspect boo | Select-String  "IPAddress"   --> Powershell
+OR
+docker container inspect boo --format "{{.NetworkSettings.IPAddress}}"
+
+docker network create --driver		--> create a network
+docker network connect		--> attach a network to a container
+docker network disconnect		--> detach a network to a container
+
+docker network inspect bridge  --> details about the network bridge
