@@ -75,9 +75,9 @@ sudo docker container inspect elastic_1 --format "{{.NetworkSettings.Networks.my
 // tagging an image
 sudo docker image tag nginx:alpine nginx_alpine:alps
 
-
-
-
+ 
+//Building Docker Images
+sudo docker image build -t custom-nginx .
 
 
 
