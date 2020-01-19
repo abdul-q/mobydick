@@ -79,6 +79,8 @@ sudo docker image tag nginx:alpine nginx_alpine:alps
 //Building Docker Images
 sudo docker image build -t custom-nginx .
 
+//Building Docker Images existing nginx image with cusom html
+sudo docker build -t nginx_with_html .
 
 
 
