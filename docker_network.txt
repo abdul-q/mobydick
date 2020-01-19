@@ -51,6 +51,44 @@ sudo docker network connect my_app_net webhost1
 // disconnect from an existing network
 sudo docker network disconnect my_app_net webhost1
 
+DNS
+always use a custom network
+
+
+// starting an ubuntu container
+sudo docker container run -t -i -d --name ubuntu1 ubuntu /bin/bash
+sudo docker container run -t -i -d --name 50cent centos /bin/bash
+
+// contain is removed after exit.
+sudo docker container run -it --rm --name 60cent centos /bin/bash 
+
+// create a container with an Alias, in a custom network
+sudo docker container run -d --network my_app_net --network-alias search --name elastic_1 elasticsearch:2
+
+
+// run a container, then run a command
+sudo docker container run -it --network my_app_net --name albino1 alpine nslookup search
+
+//check ip address
+sudo docker container inspect elastic_1 --format "{{.NetworkSettings.Networks.my_app_net.IPAddress}}"
+
+// tagging an image
+sudo docker image tag nginx:alpine nginx_alpine:alps
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
