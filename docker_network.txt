@@ -82,7 +82,10 @@ sudo docker image build -t custom-nginx .
 //Building Docker Images existing nginx image with cusom html
 sudo docker build -t nginx_with_html .
 
+//Volume
+sudo docker volume ls
 
+sudo docker volume inspect 22db92b4a47392a91cc30275ddc7906b90622e74682c1acc1b371017b844c6e7
 
 
 
