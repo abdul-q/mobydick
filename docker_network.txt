@@ -87,10 +87,15 @@ sudo docker volume ls
 
 sudo docker volume inspect 22db92b4a47392a91cc30275ddc7906b90622e74682c1acc1b371017b844c6e7
 
+// Named Volumes	-v does the trick
+sudo docker container run -d --name alps -p 89:80 -v apls-10x: nginx:alpine
 
-
-
-
+// Persistent Data: Bind Mounting
+-- maps a host file or directory to a container file or directory
+-- basically just two locations pointing to the same file(s)
+-- can't use in Dockerfile, must be at container run
+	... run -v /Users/bret/stuff:/path/container	 (mac/linux)
+	... run -v //c/Users/bret/stuff:/path/container  (windows)
 
 
 
