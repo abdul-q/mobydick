@@ -97,6 +97,9 @@ sudo docker container run -d --name alps -p 89:80 -v apls-10x: nginx:alpine
 	... run -v /Users/bret/stuff:/path/container	 (mac/linux)
 	... run -v //c/Users/bret/stuff:/path/container  (windows)
 
+$(pwd) - this gets the present working directory
+sudo docker run -d --name binder -p 99:80 -v $(pwd):/usr/share/nginx/html nginx
+--this allows you edit the docker files/configs from the host
 
 
 
