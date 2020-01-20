@@ -101,6 +101,10 @@ $(pwd) - this gets the present working directory
 sudo docker run -d --name binder -p 99:80 -v $(pwd):/usr/share/nginx/html nginx
 --this allows you edit the docker files/configs from the host
 
+//Assinement: Named Volumes
+Database upgrades with container postgres 9.6.1 to 9.6.2
+
+
 
 
 
