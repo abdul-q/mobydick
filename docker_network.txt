@@ -104,7 +104,9 @@ sudo docker run -d --name binder -p 99:80 -v $(pwd):/usr/share/nginx/html nginx
 //Assinement: Named Volumes
 Database upgrades with container postgres 9.6.1 to 9.6.2
 
+sudo docker container run -d --name post1 -v postgres_v:/var/lib/postgresql/data -e POSTGRES_PASSWORD=mysecretpassword  postgres:9.6
 
+sudo docker container run -d --name post2 -v postgres_v:/var/lib/postgresql/data -e POSTGRES_PASSWORD=mysecretpassword  postgres:9.6.1
 
 
 
