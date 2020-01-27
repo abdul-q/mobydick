@@ -4,6 +4,21 @@ docker-compose up  -> setup volumes/networks and start all containers
 
 docker-compose down  -> stop all containers and remove cont/vol/net
 
+docker-compose up --build
+
+docker-compose build
+
+docker-compose down -i
+
+
+
+
+
+
+
+
+
+
 
 
 
