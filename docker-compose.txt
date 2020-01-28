@@ -8,8 +8,7 @@ docker-compose up --build
 
 docker-compose build
 
-docker-compose down -i
-
+docker-compose down -v
 
 
 
