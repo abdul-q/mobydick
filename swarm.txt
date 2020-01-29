@@ -1,0 +1,80 @@
+sudo docker swarm init	--initializes docker swarm
+
+Swarm initialized: current node (tpmsc6dpgx2jgbzy17vye4uzv) is now a manager.
+
+To add a worker to this swarm, run the following command:
+
+    docker swarm join --token SWMTKN-1-0lip1ok03o2d5l36u5a19kx80jxqj2bh98d5e3w0cunj7jcko4-7ovdg0ac7cbsdxnpemhu90k56 192.168.0.138:2377
+
+To add a manager to this swarm, run 'docker swarm join-token manager' and follow the instructions.
+
+docker service --help
+
+Commands:
+  create      Create a new service
+  inspect     Display detailed information on one or more services
+  logs        Fetch the logs of a service or task
+  ls          List services
+  ps          List the tasks of one or more services
+  rm          Remove one or more services
+  rollback    Revert changes to a service's configuration
+  scale       Scale one or multiple replicated services
+  update      Update a service
+
+sudo docker swarm --help
+
+Usage:	docker swarm COMMAND
+
+Manage Swarm
+
+Commands:
+  ca          Display and rotate the root CA
+  init        Initialize a swarm
+  join        Join a swarm as a node and/or manager
+  join-token  Manage join tokens
+  leave       Leave the swarm
+  unlock      Unlock swarm
+  unlock-key  Manage the unlock key
+  update      Update the swarm
+
+
+sudo docker node --help
+
+Usage:	docker node COMMAND
+
+Manage Swarm nodes
+
+Commands:
+  demote      Demote one or more nodes from manager in the swarm
+  inspect     Display detailed information on one or more nodes
+  ls          List nodes in the swarm
+  promote     Promote one or more nodes to manager in the swarm
+  ps          List tasks running on one or more nodes, defaults to current node
+  rm          Remove one or more nodes from the swarm
+  update      Update a node
+
+
+
+sudo docker node ls	--list all managers available (there can only be one leader
+
+sudo docker service create alpine ping 8.8.8.8		--spins up a docker service
+
+sudo docker service ls				-- list running service
+
+sudo docker service ps jovial_panini		-- info about container inside swarm
+
+//scaling up
+sudo docker service update 8314mgz551di --replicas 3	-- added two more replicas to the tasks
+
+
+sudo docker --help
+sudo docker service update --help
+
+Docker Swarm is programmed to achieve indempotency.
+
+
+//createing Node Swarm: Host Options
+
+
+
+
