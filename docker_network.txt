@@ -1,8 +1,6 @@
 docker container run -d -p 3306:3306 --name db3 -e MYSQL_RANDOM_ROOT_PASSWORD=yes mysql
-do
+
 docker container stop
-
-
 
 docker container logs  name_of_conainer
 
