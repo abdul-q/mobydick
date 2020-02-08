@@ -22,7 +22,7 @@ docker container start -ai docked bash
 
 Docker Networks:
 -p --> port
-docker container network -ls  --> show network
+docker network ls  --> show network
 docker container port container  --> show ports
 
 Skip virtual networks and use host IP (--net=host)

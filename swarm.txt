@@ -73,7 +73,7 @@ sudo docker service update --help
 Docker Swarm is programmed to achieve indempotency.
 
 
-//createing Node Swarm: Host Options
+//creating Node Swarm: Host Options
 
 
 
