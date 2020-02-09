@@ -1,10 +1,10 @@
 sudo docker swarm init	--initializes docker swarm
 
-Swarm initialized: current node (tpmsc6dpgx2jgbzy17vye4uzv) is now a manager.
+Swarm initialized: current node (mg3x1ha6136bmrdtb53pebr67) is now a manager.
 
 To add a worker to this swarm, run the following command:
 
-    docker swarm join --token SWMTKN-1-0lip1ok03o2d5l36u5a19kx80jxqj2bh98d5e3w0cunj7jcko4-7ovdg0ac7cbsdxnpemhu90k56 192.168.0.138:2377
+    docker swarm join --token SWMTKN-1-07skf9vzlub6iykuvxzuyj4h6omisnxqy9ht8x0jq944prkvof-1ork6knonmgmn467nvrvgj9ax 192.168.0.194:2377
 
 To add a manager to this swarm, run 'docker swarm join-token manager' and follow the instructions.
 
@@ -74,6 +74,43 @@ Docker Swarm is programmed to achieve indempotency.
 
 
 //creating Node Swarm: Host Options
+
+//overlay makess the nodes/containers appear to be on the same subnet
+sudo docker network create --driver overlay droopy
+
+sudo docker service create --name psql --network droopy -e POSTGRES_PASSWORD=supersecret postgres
+
+
+sudo docker service  create --name drupal --network droopy -p 97:80 drupal
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
